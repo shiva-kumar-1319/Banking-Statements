@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: banksense-ai
+    runtime: python
+    buildCommand: "npm --prefix frontend install && npm --prefix frontend run build && pip install -r requirements.txt && python banking/manage.py migrate && python banking/manage.py collectstatic --noinput && python banking/manage.py seed_demo_data"
+    startCommand: "gunicorn --chdir banking banking.wsgi:application --bind 0.0.0.0:$PORT"
+    envVars:
+      - key: DJANGO_DEBUG
+        value: "False"
+      - key: DJANGO_ALLOWED_HOSTS
+        value: ".onrender.com,localhost,127.0.0.1"
+      - key: PYTHON_VERSION
+        value: "3.13.0"

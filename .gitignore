@@ -1,6 +1,7 @@
 # Python
 __pycache__/
 *.py[cod]
+*$py.class
 *.pyo
 *.pyd
 
@@ -8,6 +9,7 @@ __pycache__/
 .venv/
 env/
 venv/
+ENV/
 
 # Django
 *.log
@@ -15,9 +17,8 @@ db.sqlite3
 media/
 staticfiles/
 
-# Frontend
+# Node & Frontend
 frontend/node_modules/
-frontend/dist/
 frontend/.env.local
 frontend/.env.*.local
 
@@ -27,6 +28,8 @@ frontend/.env.*.local
 # Editors
 .vscode/
 .idea/
+*.swp
+*.swo
 
 # OS files
 Thumbs.db

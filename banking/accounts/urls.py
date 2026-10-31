@@ -1,18 +1,12 @@
-from django.urls import path,include
+from django.urls import path, include
 from rest_framework.routers import DefaultRouter
+from .views import BankAccountViewSet, UserRegistrationView, CurrentUserProfileView
 
-from .views import AccountViewSet
+router = DefaultRouter()
+router.register('accounts', BankAccountViewSet, basename='bankaccount')
 
-router=DefaultRouter()
-
-router.register(
-    'accounts',
-    AccountViewSet
-)
-
-urlpatterns=[
-
-    path('',
-         include(router.urls))
-
+urlpatterns = [
+    path('auth/register/', UserRegistrationView.as_view(), name='auth-register'),
+    path('auth/me/', CurrentUserProfileView.as_view(), name='auth-me'),
+    path('', include(router.urls)),
 ]

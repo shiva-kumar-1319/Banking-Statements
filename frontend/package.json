@@ -6,10 +6,10 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
-    "vite": "latest",
+    "axios": "latest",
+    "lucide-react": "^1.65.0",
     "react": "latest",
     "react-dom": "latest",
-    "axios": "latest"
-  },
-  "devDependencies": {}
+    "vite": "latest"
+  }
 }
