@@ -11,7 +11,7 @@
 
 ---
 
-## 🏛️ System Architecture (Boxes & Links)
+## 🏛️ System Architecture 
 
 BankSense AI employs an isolated multi-tenant architecture that completely separates UI presentation, authenticated API gateway routing, multi-format statement parsing, deterministic financial arithmetic, and persistent storage.
 
