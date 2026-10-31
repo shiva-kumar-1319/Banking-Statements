@@ -11,3 +11,4 @@ services:
         value: ".onrender.com,localhost,127.0.0.1"
       - key: PYTHON_VERSION
         value: "3.13.0"
+
